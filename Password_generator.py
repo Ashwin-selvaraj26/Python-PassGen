@@ -1,6 +1,8 @@
 import random
 import string
 
+speChars = '!@#$%&?'
+
 def getNumber(prompt) :
     while True:
         num_str = input(prompt)
@@ -24,7 +26,7 @@ def randString(length,useCapital,useNumber,useSpecial):
     if useNumber == 'y':
         characters += string.digits
     if useSpecial == 'y':
-        characters += string.punctuation
+        characters += speChars
 
     random_string = ''.join(random.choices(characters, k=length))
     return random_string
